@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "login": "teste",
+      "senha": "abcd123",
+      "remember": false
+    },
+    {
+      "id": 2,
+      "login": "admin",
+      "senha": "admin",
+      "remember": false
+    },
+    {
+      "id": 3,
+      "login": "hash",
+      "senha":"ha$h",
+      "remember": true
+    }
+  ]
+}
