@@ -3,17 +3,17 @@ const { getAnimals, getAnimal, createAnimal, updateAnimal, deleteAnimal } = requ
 
 
 const server = http.createServer((req, res) => {
-    if (req.url === '/api/animals' && req.method === 'GET'){
+    if (req.url === '/animals' && req.method === 'GET'){
         getAnimals(req, res)
-    } else if (req.url.match(/\/api\/animals\/([0-9]+)/) && req.method === 'GET'){
+    } else if (req.url.match(/\/animals\/([0-9]+)/) && req.method === 'GET'){
         const id = req.url.split('/')[3]
         getAnimal(req, res, id)
-    } else if (req.url === '/api/animals' && req.method === 'POST'){
+    } else if (req.url === '/animals' && req.method === 'POST'){
         createAnimal(req, res)
-    } else if (req.url.match(/\/api\/animals\/([0-9]+)/) && req.method === 'PUT'){
+    } else if (req.url.match(/\/animals\/([0-9]+)/) && req.method === 'PUT'){
         const id = req.url.split('/')[3]
         updateAnimal(req, res, id)
-    } else if (req.url.match(/\/api\/animals\/([0-9]+)/) && req.method === 'DELETE'){
+    } else if (req.url.match(/\/animals\/([0-9]+)/) && req.method === 'DELETE'){
         const id = req.url.split('/')[3]
         deleteAnimal(req, res, id)
     } 
