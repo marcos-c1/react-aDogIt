@@ -24,6 +24,7 @@ function App() {
     const data = await res.json()
     console.log(data)
   }
+  
   const addUser = (login) => {
     const id = Math.ceil(Math.random()*10000+1)
     const newLogin = {id, ...login}
